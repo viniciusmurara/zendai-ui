@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Sidebar from "@/components/template/sidebar";
+import Header from "@/components/template/header";
+import HelpButton from "@/components/template/help-button";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,8 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased font-sansation">
-        {children}
+      <body className="antialiased">
+        <Sidebar />
+        <Header />
+        <main className="ml-[18%] min-h-screen bg-beige">
+          {children}
+        </main>
+        <div className="fixed bottom-8 right-10 z-40">
+          <HelpButton />
+        </div>
       </body>
     </html>
   );

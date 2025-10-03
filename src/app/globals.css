@@ -1,11 +1,11 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import "tailwindcss";
 
 :root {
   --primary: #397358;
   --secondary: #C3E3AB;
-  --white: #DCE4D0;
-  --background: var(--white);
+  --beige: #DCE4D0;
+  --background: var(--beige);
   --foreground: var(--primary);
 
   --font-family: 'Sansation', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
@@ -19,7 +19,7 @@
 
 .bg-primary { background-color: var(--primary); }
 .bg-secondary { background-color: var(--secondary); }
-.bg-white { background-color: var(--white); }
+.bg-beige { background-color: var(--beige); }
 .bg-primary-light { background-color: var(--primary-light); }
 .bg-primary-dark { background-color: var(--primary-dark); }
 .bg-secondary-light { background-color: var(--secondary-light); }
@@ -27,7 +27,7 @@
 
 .text-primary { color: var(--primary); }
 .text-secondary { color: var(--secondary); }
-.text-white { color: var(--white); }
+.text-beige { color: var(--beige); }
 .text-primary-light { color: var(--primary-light); }
 .text-primary-dark { color: var(--primary-dark); }
 .text-secondary-light { color: var(--secondary-light); }
@@ -35,8 +35,32 @@
 
 .border-primary { border-color: var(--primary); }
 .border-secondary { border-color: var(--secondary); }
-.border-white { border-color: var(--white); }
+.border-beige { border-color: var(--beige); }
 
 .hover\:bg-primary-dark:hover { background-color: var(--primary-dark); }
 .hover\:bg-secondary-dark:hover { background-color: var(--secondary-dark); }
 .hover\:text-primary-light:hover { color: var(--primary-light); }
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: var(--beige);
+  border-radius: 4px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--beige) var(--primary);
+  overflow-y: scroll;
+}

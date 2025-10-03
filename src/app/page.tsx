@@ -1,9 +1,7 @@
-import ThemeExample from "@/components/ThemeExample";
-
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <ThemeExample />
+    <div className="min-h-screen flex justify-center items-center">
+      <p>home page teste</p>
     </div>
   );
 }
